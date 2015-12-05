@@ -1,2 +1,3 @@
 # fakeit
-snap.svg js system-based for make interface prototypes with svg mockup files
+until you make it
+A strange use of Snap.svg.js to make interface prototypes with svg mockups
