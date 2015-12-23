@@ -13,7 +13,7 @@ Project structure
 
 ## You will need
 1. A good web browser, like firefox or google chrome
-2. An httpd server. I recommend use justp hp with command `> php -S localhost:8080`. You can use pytho with `python -m SimpleHTTPServer 8080` . If you are in the Windows, there are easy alternatives, like [Xampp](https://www.apachefriends.org/pt_br/download.html)
+2. An httpd server. I recommend use just php with command `> php -S localhost:8080`. Or you can use python `> python -m SimpleHTTPServer 8080` . If you are in the Windows, there are easy alternatives, like [Xampp](https://www.apachefriends.org/pt_br/download.html)
 3. A SVG editor. I recommend the Adobe Illustrator and the Inkscape (opensource and available on linux too)
 
 ## How can you call your svg mockup in the html body
@@ -25,8 +25,7 @@ fakeit("mockup","mockups/mockup_original.svg");
 </script>
 ```
 - or Register the url in the `settings.js` file and call the mockups in the html:
-*settings.js*
-```
+```settings.js
 mockup: {
 			behavior: "mockup",
 			reference_id: "mockup",
@@ -36,8 +35,7 @@ mockup: {
 			]
 	}
 ```
-*html file*
-```
+```html file
 <script type="text/javascript">
 fakeit("mockup");
 </script>
