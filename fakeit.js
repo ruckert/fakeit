@@ -52,27 +52,30 @@ function init() {
 
 // Put your svg mockup in the html body
 function mockup() {
-	if (arguments[0] === undefined) { return false };
-	
-	// Load .svg file
-	Snap.ajax(arguments[0].id, "GET", function (data) {
+	if (arguments[0] === undefined) { return false }
+	if (arguments[0].id === undefined) { arguments = components_list["mockup"].screens; }
+	if (arguments[0].url === undefined) { arguments[0] = { id: "default", url: arguments[0].id }; }
+	for (var i=0; i < arguments.length; i++) {
+		// Load .svg file
+		Snap.ajax(arguments[i].url, "GET", function (data) {
 
-	// Append to body document
-	var mockup_target = document.body;
-	var mockup_responseText = data.responseText;
-	mockup_target.innerHTML = mockup_responseText;
+			// Append to body document
+			var mockup_target = document.body;
+			var mockup_responseText = data.responseText;
+			mockup_target.innerHTML = mockup_responseText;
 
-	// Parsing data and get the mockup id // Gambiarra para pegar a id do arquivo .svg
-	var parsing = Snap.parse(data);
-	var mockup_id = parsing.node.ownerDocument.body.childNodes[0].nextElementSibling.id;
+			// Parsing data and get the mockup id // Gambiarra para pegar a id do arquivo .svg
+			var parsing = Snap.parse(data);
+			var mockup_id = parsing.node.ownerDocument.body.childNodes[0].nextElementSibling.id;
 
-	var svg_mockup;
-	svg_mockup = Snap("#" + mockup_id);
+			var svg_mockup;
+			svg_mockup = Snap("#" + mockup_id);
+			
 
+			init();
 
-	init();
-
-	});
+		});
+	}
 }
 
 function hidden() {
