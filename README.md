@@ -18,13 +18,13 @@ Project structure
 
 ## How can you call your svg mockup in the html body
 You have three alternatives:
-1. Call the mockup inside the html file by url:
+- Call the mockup inside the html file by url:
 ```
 <script type="text/javascript">
 fakeit("mockup","mockups/mockup_original.svg");
 </script>
 ```
-2. Register the url in the `settings.js` file and call the mockups in the html:
+- or Register the url in the `settings.js` file and call the mockups in the html:
 *settings.js*
 ```
 mockup: {
@@ -42,7 +42,7 @@ mockup: {
 fakeit("mockup");
 </script>
 ```
-3. Call the mockup in the html with an object:
+- or Call the mockup in the html with an object:
 ```
 <script type="text/javascript">
 fakeit("mockup",{ id: "second", url: "mockups/mockup_original.svg"});
