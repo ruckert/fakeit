@@ -10,3 +10,41 @@ Project structure
 - prototype.html -> here is where you reference the mockup .svg files
 - fakeit.js -> here's the place where the magic happens
 - settings.js -> put your definitions here
+
+## You will need
+1. A good web browser, like firefox or google chrome
+2. An httpd server. I recommend use justp hp with command `> php -S localhost:8080`. You can use pytho with `python -m SimpleHTTPServer 8080` . If you are in the Windows, there are easy alternatives, like [Xampp](https://www.apachefriends.org/pt_br/download.html)
+3. A SVG editor. I recommend the Adobe Illustrator and the Inkscape (opensource and available on linux too)
+
+## How can you call your svg mockup in the html body
+You have three alternatives:
+1. Call the mockup inside the html file by url:
+```
+<script type="text/javascript">
+fakeit("mockup","mockups/mockup_original.svg");
+</script>
+```
+2. Register the url in the `settings.js` file and call the mockups in the html:
+*settings.js*
+```
+mockup: {
+			behavior: "mockup",
+			reference_id: "mockup",
+			defaults: { multipage: false },
+			screens: [
+				{ url: "mockups/mockup_original.svg", id: "my-id" }
+			]
+	}
+```
+*html file*
+```
+<script type="text/javascript">
+fakeit("mockup");
+</script>
+```
+3. Call the mockup in the html with an object:
+```
+<script type="text/javascript">
+fakeit("mockup",{ id: "second", url: "mockups/mockup_original.svg"});
+</script>
+```
