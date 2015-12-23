@@ -25,7 +25,8 @@ fakeit("mockup","mockups/mockup_original.svg");
 </script>
 ```
 - or Register the url in the `settings.js` file and call the mockups in the html:
-```settings.js
+  - settings.js
+```
 mockup: {
 			behavior: "mockup",
 			reference_id: "mockup",
@@ -35,7 +36,8 @@ mockup: {
 			]
 	}
 ```
-```html file
+  - html file
+```
 <script type="text/javascript">
 fakeit("mockup");
 </script>
