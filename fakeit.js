@@ -12,7 +12,8 @@ function fakeit(component, object_id, part_of_id) {
 	if (part_of_id === true) {
 		initial_array = document.querySelectorAll('[id*="' + object_id + '"]');
 	} else {
-		initial_array = []; initial_array.push(object_id);
+		initial_array = [];
+		initial_array.push(object_id);
 	}
 
 	if (typeof object_id === "object") {
@@ -31,10 +32,10 @@ function fakeit(component, object_id, part_of_id) {
 }
 
 function init() {
-	
+
 	for (component in components_list) {
 		fakeit(component, false, true);
-	}	
+	}
 	console.log("passou o init!");
 	// fakeit("button",{
 	// 	id:"avancar",
@@ -70,7 +71,7 @@ function mockup() {
 
 			var svg_mockup;
 			svg_mockup = Snap("#" + mockup_id);
-			
+
 
 			init();
 
@@ -80,42 +81,42 @@ function mockup() {
 
 function hidden() {
   forEachID(arguments, function(elem) {
-	var self = Snap("#" + elem.id);
-	if (elem.animation) {
+		var self = Snap("#" + elem.id);
+		if (elem.animation) {
 
-	}
-	self.addClass("hidden");
+		}
+		self.addClass("hidden");
   });
 }
 
 function button() {
   forEachID(arguments, function(elem) {
 
-	var self = Snap("#" + elem.id);
-	var aim = Snap("#" + elem.target);
+		var self = Snap("#" + elem.id);
+		var aim = Snap("#" + elem.target);
 
-	if (aim === null) {
-		var complete_id = elem.id;
-		var find_a_target = complete_id.search("target");
-		if (find_a_target !== -1) {
-			complete_id = complete_id.slice(find_a_target+7);
-			aim = Snap("#" + complete_id);
-		} else {
-			aim = null;	
-		}	
-	}
+		if (aim === null) {
+			var complete_id = elem.id;
+			var find_a_target = complete_id.search("target");
+			if (find_a_target !== -1) {
+				complete_id = complete_id.slice(find_a_target+7);
+				aim = Snap("#" + complete_id);
+			} else {
+				aim = null;
+			}
+		}
 
 
-	self.addClass("button");
-	var shadow = self.filter(Snap.filter.shadow(4, 4, 6, '#000000', 1));
+		self.addClass("button");
+		var shadow = self.filter(Snap.filter.shadow(4, 4, 6, '#000000', 1));
 
-	self.click(function() {
-	  if (aim === null) {
-		console.error("The target is empty or wrong");
-	  } else {
-		aim.toggleClass("hidden");
-	  }
-	});
+		self.click(function() {
+		  if (aim === null) {
+			console.error("The target is empty or wrong");
+		  } else {
+			aim.toggleClass("hidden");
+		  }
+		});
   });
 }
 
