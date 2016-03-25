@@ -7,7 +7,7 @@ var components_list = {
 			reference_id: "mockup",
 			defaults: { multipage: false },
 			screens: [
-				{ url: "mockups/mockup_original.svg", id: "third" }
+				{ url: "mockups/main.svg", id: "main" }
 			]
 	},
 	button: {

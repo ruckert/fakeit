@@ -1,8 +1,16 @@
+var mockup_exists = false;
+var custom_elements = [];
+
 function fakeit(component, object_id, part_of_id) {
 
-	var initial_array;
-	var obj_behavior = components_list[component].behavior;
+	if ((!mockup_exists) && (component !== "mockup")) {
+		custom_elements.push(arguments);
+		return false;
+	}
+
+	var initial_array = [];
 	var result_obj_array = [];
+	var obj_behavior = components_list[component].behavior;
 	var obj_defaults = components_list[component].defaults;
 
 	if (object_id === false) {
@@ -12,7 +20,6 @@ function fakeit(component, object_id, part_of_id) {
 	if (part_of_id === true) {
 		initial_array = document.querySelectorAll('[id*="' + object_id + '"]');
 	} else {
-		initial_array = [];
 		initial_array.push(object_id);
 	}
 
@@ -26,29 +33,29 @@ function fakeit(component, object_id, part_of_id) {
 		var _id = part_of_id ? { id: initial_array[i].id } : { id: initial_array[i] };
 		var obj_complete = mergeObjs(obj_defaults, _id);
 		result_obj_array.push(obj_complete);
-		// console.log(result_obj_array);
 	}
 	return window[obj_behavior].apply(this, result_obj_array);
 }
 
-function init() {
+
+
+
+function init(exception) {
 
 	for (component in components_list) {
-		fakeit(component, false, true);
+		if (component !== exception) {
+			fakeit(component, false, true);
+		}
 	}
-	console.log("passou o init!");
-	// fakeit("button",{
-	// 	id:"avancar",
-	// 	target:"text9360"
-	// });
 
-	// fakeit("button",{
-	// 	id:"menu_btn",
-	// 	target:"menu_lateral"
-	// });
-	// fakeit("hidden","menu_lateral");
+	for (var i = 0; i < custom_elements.length; i++) {
+		fakeit(custom_elements[i][0],custom_elements[i][1],custom_elements[i][2]);
+	}
 
+	console.log("here we go!");
 }
+
+
 
 
 // Put your svg mockup in the html body
@@ -57,6 +64,7 @@ function mockup() {
 	if (arguments[0].id === undefined) { arguments = components_list["mockup"].screens; }
 	if (arguments[0].url === undefined) { arguments[0] = { id: "default", url: arguments[0].id }; }
 	for (var i=0; i < arguments.length; i++) {
+
 		// Load .svg file
 		Snap.ajax(arguments[i].url, "GET", function (data) {
 
@@ -71,9 +79,9 @@ function mockup() {
 
 			var svg_mockup;
 			svg_mockup = Snap("#" + mockup_id);
+			mockup_exists = true;
 
-
-			init();
+			init("mockup");
 
 		});
 	}
@@ -106,15 +114,14 @@ function button() {
 			}
 		}
 
-
 		self.addClass("button");
 		var shadow = self.filter(Snap.filter.shadow(4, 4, 6, '#000000', 1));
 
 		self.click(function() {
 		  if (aim === null) {
-			console.error("The target is empty or wrong");
+				console.error("The target is empty or wrong");
 		  } else {
-			aim.toggleClass("hidden");
+				aim.toggleClass("hidden");
 		  }
 		});
   });
