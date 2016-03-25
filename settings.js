@@ -24,8 +24,10 @@ var components_list = {
 		behavior: "dropdown",
 		reference_id: "drpdn",
 		defaults: { combo: false, animation: false }
+	},
+	checkbox: {
+		behavior: "checkbox",
+		reference_id: "chk_d",
+		defaults: { second: false, third: false }
 	}
-
-
-
 };

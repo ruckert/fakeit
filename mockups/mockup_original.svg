@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="309.60191"
-     inkscape:cy="339.60259"
+     inkscape:zoom="4"
+     inkscape:cx="78.10191"
+     inkscape:cy="466.10259"
      inkscape:document-units="px"
-     inkscape:current-layer="menu_lateral"
+     inkscape:current-layer="layer9"
      showgrid="true"
      units="px"
      inkscape:showpageshadow="false"
@@ -81,7 +81,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-412.3621)"
-     style="opacity:1">
+     style="display:inline;opacity:1">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#004455;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -121,7 +121,7 @@
        id="rect9396"
        style="opacity:1;fill:#006680;fill-opacity:1;stroke:none" />
     <g
-       id="switch01_on"
+       id="chkon_01"
        inkscape:label="#g9658">
       <rect
          style="opacity:1;fill:#f0f4f5;fill-opacity:1;stroke:none"
@@ -204,56 +204,44 @@
          y="578.51837"
          style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#0b84a2;fill-opacity:1">Detectar movimentação no ambiente</tspan></text>
     <g
-       id="switch02_off"
+       transform="translate(0,49.999978)"
        inkscape:label="#g9658"
-       transform="translate(0,49.999978)">
+       id="chk_t_02">
       <rect
-         style="opacity:1;fill:#f0f4f5;fill-opacity:1;stroke:none"
-         id="rect9801"
-         width="90"
-         height="25.000021"
+         y="507.36209"
          x="30"
-         y="507.36209" />
+         height="25.000021"
+         width="90"
+         id="rect4449"
+         style="opacity:1;fill:#f0f4f5;fill-opacity:1;stroke:none" />
+      <rect
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#1e8ba6;fill-opacity:1;stroke:none"
+         id="rect4455"
+         width="45"
+         height="2"
+         x="30"
+         y="-534.36212" />
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#bfcfd3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         x="43.277344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#1e8ba6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="58.277344"
          y="527.20587"
-         id="text9803"
+         id="text4457"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
-           id="tspan9805"
-           x="43.277344"
+           id="tspan4459"
+           x="58.277344"
            y="527.20587"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#bfcfd3;fill-opacity:1">on</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#1e8ba6;fill-opacity:1">third</tspan></text>
       <rect
+         transform="scale(1,-1)"
          y="-534.36212"
-         x="30"
-         height="2"
-         width="45"
-         id="rect9807"
-         style="opacity:1;fill:#bfcfd3;fill-opacity:1;stroke:none"
-         transform="scale(1,-1)" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text9809"
-         y="527.20587"
-         x="87.277344"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#1e8ba6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#1e8ba6;fill-opacity:1"
-           y="527.20587"
-           x="87.277344"
-           id="tspan9811"
-           sodipodi:role="line">off</tspan></text>
-      <rect
-         style="opacity:1;fill:#1e8ba6;fill-opacity:1;stroke:none"
-         id="rect9813"
-         width="45"
-         height="2"
          x="75"
-         y="-534.36212"
-         transform="scale(1,-1)" />
+         height="2"
+         width="45"
+         id="rect4461"
+         style="opacity:1;fill:#1e8ba6;fill-opacity:1;stroke:none" />
     </g>
     <text
        sodipodi:linespacing="125%"
@@ -467,6 +455,109 @@
            y="1014.6111"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#ffffff">Concluir configuração</tspan></text>
     </g>
+    <g
+       inkscape:label="#g9658"
+       id="chk_s_01">
+      <rect
+         y="507.36209"
+         x="30"
+         height="25.000021"
+         width="90"
+         id="rect4433"
+         style="opacity:1;fill:#f0f4f5;fill-opacity:1;stroke:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4435"
+         y="527.20587"
+         x="43.277344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#1e8ba6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#1e8ba6;fill-opacity:1"
+           y="527.20587"
+           x="43.277344"
+           id="tspan4437"
+           sodipodi:role="line">on</tspan></text>
+      <rect
+         transform="scale(1,-1)"
+         style="opacity:1;fill:#1e8ba6;fill-opacity:1;stroke:none"
+         id="rect4439"
+         width="45"
+         height="2"
+         x="30"
+         y="-534.36212" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#bfcfd3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="87.277344"
+         y="527.20587"
+         id="text4441"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan4443"
+           x="87.277344"
+           y="527.20587"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#bfcfd3;fill-opacity:1">off</tspan></text>
+      <rect
+         transform="scale(1,-1)"
+         y="-534.36212"
+         x="75"
+         height="2"
+         width="45"
+         id="rect4445"
+         style="opacity:1;fill:#bfcfd3;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="chk_s_02"
+       inkscape:label="#g9658"
+       transform="translate(0,49.999978)">
+      <rect
+         style="opacity:1;fill:#f0f4f5;fill-opacity:1;stroke:none"
+         id="rect9801"
+         width="90"
+         height="25.000021"
+         x="30"
+         y="507.36209" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#bfcfd3;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="43.277344"
+         y="527.20587"
+         id="text9803"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           id="tspan9805"
+           x="43.277344"
+           y="527.20587"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#bfcfd3;fill-opacity:1">on</tspan></text>
+      <rect
+         y="-534.36212"
+         x="30"
+         height="2"
+         width="45"
+         id="rect9807"
+         style="opacity:1;fill:#bfcfd3;fill-opacity:1;stroke:none"
+         transform="scale(1,-1)" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text9809"
+         y="527.20587"
+         x="87.277344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#1e8ba6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans Light';fill:#1e8ba6;fill-opacity:1"
+           y="527.20587"
+           x="87.277344"
+           id="tspan9811"
+           sodipodi:role="line">off</tspan></text>
+      <rect
+         style="opacity:1;fill:#1e8ba6;fill-opacity:1;stroke:none"
+         id="rect9813"
+         width="45"
+         height="2"
+         x="75"
+         y="-534.36212"
+         transform="scale(1,-1)" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -477,7 +568,7 @@
        transform="translate(0,-412.3621)"
        style="shape-rendering:crispEdges"
        inkscape:label="#g9658"
-       id="switch01_off_hidden">
+       id="chk_d_01">
       <rect
          y="507.36209"
          x="30"
@@ -529,7 +620,7 @@
     <g
        style="shape-rendering:crispEdges"
        inkscape:label="#g9658"
-       id="switch02_on_hidden"
+       id="chk_d_02"
        transform="translate(0,-362.36212)">
       <rect
          y="507.36209"

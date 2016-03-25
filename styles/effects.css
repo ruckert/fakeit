@@ -28,3 +28,6 @@
 .hidden {
 	display: none !important;
 }
+.checkbox {
+	cursor: pointer;
+}

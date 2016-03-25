@@ -1,6 +1,8 @@
 var mockup_exists = false;
 var custom_elements = [];
 
+
+
 function fakeit(component, object_id, part_of_id) {
 
 	if ((!mockup_exists) && (component !== "mockup")) {
@@ -66,7 +68,7 @@ function mockup() {
 	for (var i=0; i < arguments.length; i++) {
 
 		// Load .svg file
-		Snap.ajax(arguments[i].url, "GET", function (data) {
+		Snap.ajax(arguments[i].url, "GET", function(data) {
 
 			// Append to body document
 			var mockup_target = document.body;
@@ -128,9 +130,52 @@ function button() {
 }
 
 
-function dropdown() {
+function checkbox() {
+	forEachID(arguments, function(elem) {
+		var inner_id = elem.id.slice(6);
+		var default_state = Snap("#" + elem.id);
+		var second_state = Snap("#chk_s_" + inner_id);
+		var third_state = Snap("#chk_t_" + inner_id);
 
+		default_state.addClass("checkbox");
+		default_state.click(function() {
+			if (second_state === null) {
+				console.error("The second state is null or wrong");
+			} else {
+				second_state.toggleClass("hidden");
+				default_state.toggleClass("hidden");
+			}
+		});
+
+		if (second_state !== null) {
+			second_state.addClass("checkbox hidden");
+			second_state.click(function() {
+				if (third_state !== null) {
+					second_state.toggleClass("hidden");
+					third_state.toggleClass("hidden");
+				} else {
+					default_state.toggleClass("hidden");
+					second_state.toggleClass("hidden");
+				}
+			});
+		}
+
+		if (third_state !== null) {
+			third_state.addClass("checkbox hidden");
+			third_state.click(function() {
+				default_state.toggleClass("hidden");
+				third_state.toggleClass("hidden");
+			});
+		}
+
+	});
 }
+
+
+function dropdown() {
+	console.log(arguments);
+}
+
 
 
 
