@@ -13,18 +13,18 @@ Project structure
 
 ## You will need
 1. A good web browser, like firefox or google chrome
-2. An httpd server. I recommend use just php with command `> php -S localhost:8080`. Or you can use python `> python -m SimpleHTTPServer 8080` . If you are in the Windows, there are easy alternatives, like [Xampp](https://www.apachefriends.org/pt_br/download.html)
-3. A SVG editor. I recommend the Adobe Illustrator and the Inkscape (opensource and available on linux too)
+2. An httpd server. I recommend use just php with command `> php -S localhost:8080`. Or you can use python `> python -m SimpleHTTPServer 8080` . If you are in the Windows, there are easy alternatives, like [Xampp](https://www.apachefriends.org/pt_br/download.html) and Node.js + http-server
+3. A SVG editor. I recommend the Adobe Illustrator and the Inkscape (opensource and available for linux too \o/)
 
 ## How can you call your svg mockup in the html body
 You have three alternatives:
-- Call the mockup inside the html file by url:
+1. Call the mockup inside the html file by url:
 ```
 <script type="text/javascript">
 fakeit("mockup","mockups/mockup_original.svg");
 </script>
 ```
-- or Register the url in the `settings.js` file and call the mockups in the html:
+2. or Register the url in the `settings.js` file and call the mockups in the html:
   - settings.js
 ```
 mockup: {
@@ -36,13 +36,13 @@ mockup: {
 			]
 	}
 ```
-  - html file
+3. inside html file
 ```
 <script type="text/javascript">
 fakeit("mockup");
 </script>
 ```
-- or Call the mockup in the html with an object:
+4. or Call the mockup in the html with an object:
 ```
 <script type="text/javascript">
 fakeit("mockup",{ id: "second", url: "mockups/mockup_original.svg"});
